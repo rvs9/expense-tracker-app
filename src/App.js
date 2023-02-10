@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import AllExpenses from "./components/Expenses/AllExpenses";
 import NewExpense from "./components/NewExpense/NewExpense";
+import AllExpenses from "./components/Expenses/AllExpenses";
 
 const DUMMY_EXPENSES = [
   {
@@ -19,7 +19,7 @@ const DUMMY_EXPENSES = [
   },
   {
     id: "e4",
-    title: "New Desk",
+    title: "New Desk (Wooden)",
     amount: 450,
     date: new Date(2021, 5, 12),
   },
@@ -37,7 +37,7 @@ const App = () => {
   return (
     <div>
       <NewExpense onAddExpense={addExpenseHandler} />
-      <AllExpenses data={expenses} />
+      <AllExpenses items={expenses} />
     </div>
   );
 };
